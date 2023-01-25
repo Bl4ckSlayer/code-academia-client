@@ -19,7 +19,9 @@ const AuthProvider = ({ children }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/category-courses")
+    fetch(
+      "https://code-accademia-leaning-platform-server-main-bl4ckslayer.vercel.app/category-courses"
+    )
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
